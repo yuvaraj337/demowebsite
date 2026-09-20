@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruits Corner | Fresh Fruits. Brighter Days. Freshness Lives Here</title>
+  <meta name="description" content="Fruits Corner brings you the freshest, juiciest and healthiest fruits straight from trusted organic farms to your table. 100% fresh, fast local delivery.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23145a27'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z'/></svg>">
+  <link rel="stylesheet" href="/src/css/style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="header-wrapper" id="site-header">
+    <div class="header-container">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="Fruits Corner Home">
+        <div class="logo-main">
+          <span class="logo-icon-leaf">
+            <!-- Leaf sprout svg icon -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+            </svg>
+          </span>
+          Fruits Corner
+        </div>
+        <span class="logo-tagline">Freshness Lives Here</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-wrapper" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#categories" class="nav-link">Shop</a></li>
+          <li><a href="#benefits" class="nav-link">About Us</a></li>
+          <li><a href="#cinematic-banner" class="nav-link">Offers</a></li>
+          <li><a href="#location" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Actions: Search, Cart, Order Button -->
+      <div class="header-actions">
+        <!-- Search Trigger -->
+        <button class="action-icon-btn action-search-trigger" aria-label="Search fruits" id="header-search-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+
+        <!-- Cart Trigger with Counter Badge -->
+        <button class="action-icon-btn cart-open-trigger" aria-label="View Shopping Cart" id="header-cart-btn">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"/>
+            <circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="cart-badge">0</span>
+        </button>
+
+        <!-- Order Now Button -->
+        <a href="#shop" class="btn-order-now" id="header-order-btn">
+          <span>Order Now</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <div class="mobile-toggle" id="mobile-toggle" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="cart-drawer-overlay" id="mobile-nav-overlay"></div>
+  <div class="cart-drawer" id="mobile-nav-drawer" style="right: auto; left: -320px; width: 300px;">
+    <div class="cart-drawer-header">
+      <div class="logo-main" style="font-size: 1.3rem;">
+        Fruits Corner
+      </div>
+      <button class="cart-drawer-close" id="mobile-nav-close">✕</button>
+    </div>
+    <div style="padding: 24px;">
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 20px;">
+        <li><a href="#home" class="mobile-nav-link" style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary-dark);">Home</a></li>
+        <li><a href="#categories" class="mobile-nav-link" style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary-dark);">Shop by Category</a></li>
+        <li><a href="#shop" class="mobile-nav-link" style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary-dark);">Best Sellers</a></li>
+        <li><a href="#benefits" class="mobile-nav-link" style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary-dark);">About Us</a></li>
+        <li><a href="#cinematic-banner" class="mobile-nav-link" style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary-dark);">Special Offers</a></li>
+        <li><a href="#location" class="mobile-nav-link" style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary-dark);">Visit Store</a></li>
+      </ul>
+      <div style="margin-top: 36px;">
+        <button class="btn-hero-primary cart-open-trigger" style="width: 100%; justify-content: center;">
+          View Cart (<span class="cart-badge-inline">0</span>)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ================= HERO SECTION (10000% REFERENCE MATCH) ================= -->
+    <section class="hero-section" id="home">
+      <!-- Full authentic scenic canvas featuring the exact background and crate from the reference image -->
+      <div class="hero-canvas" id="hero-canvas"></div>
+      <div class="hero-overlay"></div>
+
+      <!-- Floating decorative leaves -->
+      <div class="floating-leaf leaf-1">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="#2d8a43" opacity="0.75">
+          <path d="M12 2C6.5 2 2 6.5 2 12c0 3 1.5 5.5 3.8 7.2L5 22l2.8-.8C9.5 21.7 10.7 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/>
+        </svg>
+      </div>
+      <div class="floating-leaf leaf-2">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="#145a27" opacity="0.6">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+        </svg>
+      </div>
+
+      <div class="hero-content-wrapper">
+        <div class="hero-grid">
+          
+          <!-- Left Text Block -->
+          <div class="hero-text-col">
+            <span class="hero-tag">FRESH FRUITS. HEALTHY LIVING.</span>
+            
+            <h1 class="hero-title">
+              <span class="hero-title-main">Good Fruits</span>
+              <div class="hero-title-script-wrap">
+                <span class="hero-title-script">Brighter Days</span>
+                <!-- Exact Curved Orange Underline Brush Stroke matching reference -->
+                <svg class="hero-title-underline" viewBox="0 0 260 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 13C45 4 140 -1 258 7C205 12 110 14 2 13Z" fill="#f05d23"/>
+                </svg>
+              </div>
+            </h1>
+
+            <p class="hero-desc">
+              At Fruits Corner, we bring you the freshest, juiciest and healthiest fruits, straight from trusted farms to your table.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#shop" class="btn-hero-primary" id="hero-shop-btn">
+                <span>Shop Fresh Fruits</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Trust Indicators directly on wooden tabletop (matching 2nd image exactly) -->
+            <div class="hero-trust-badges">
+              <div class="trust-badge-item">
+                <span class="trust-badge-icon">
+                  <!-- Leaf icon -->
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2-14 5-3.3 1.6-4.5 4.5-4 7.5A9.74 9.74 0 0 0 8 16c5-2 9-8 9-8z"/>
+                  </svg>
+                </span>
+                <span class="trust-badge-text">100% Fresh</span>
+              </div>
+              <div class="trust-badge-divider"></div>
+              <div class="trust-badge-item">
+                <span class="trust-badge-icon">
+                  <!-- Plant sprout icon -->
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 22v-9a7 7 0 0 0-7-7H2v2a7 7 0 0 0 7 7h1v7h2zm2-14a7 7 0 0 1 7-7h1v2a7 7 0 0 1-7 7h-1v5h-2v-7h2z"/>
+                  </svg>
+                </span>
+                <span class="trust-badge-text">Farm to You</span>
+              </div>
+              <div class="trust-badge-divider"></div>
+              <div class="trust-badge-item">
+                <span class="trust-badge-icon">
+                  <!-- Delivery truck icon -->
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 8h-3V4H1v13h2a3 3 0 0 0 6 0h6a3 3 0 0 0 6 0h2v-5l-3-4zM6 18.5A1.5 1.5 0 1 1 7.5 17 1.5 1.5 0 0 1 6 18.5zm12 0a1.5 1.5 0 1 1 1.5-1.5 1.5 1.5 0 0 1-1.5 1.5zM17 12V9.5h2.5l2 2.5H17z"/>
+                  </svg>
+                </span>
+                <span class="trust-badge-text">Fast & Local Delivery</span>
+              </div>
+            </div>
+
+            <!-- Mobile Fruit visual fallback to preserve responsiveness -->
+            <div class="hero-mobile-visual">
+              <img src="/images/hero-crate.jpg" alt="Fruits Corner Freshness Crate" loading="eager">
+            </div>
+          </div>
+
+          <!-- Right column spacer so the authentic crate & chalkboard from the reference image are unobstructed on desktop -->
+          <div class="hero-visual-col" aria-hidden="true">
+            <!-- Visual is rendered by the high-resolution scenic canvas -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SHOP BY CATEGORY ================= -->
+    <section class="category-section" id="categories">
+      <div class="container">
+        <div class="section-header-wrap">
+          <div>
+            <span class="section-tag">Direct From Orchards</span>
+            <h2 class="section-title">Shop by Category</h2>
+            <p class="section-subtitle">Explore a variety of fresh fruits, handpicked for you.</p>
+          </div>
+          <a href="#shop" class="btn-view-all" onclick="window.resetProductFilter()">
+            <span>View All</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="category-grid" id="category-grid-container">
+          <!-- Dynamic Category Cards injected by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE FRUITS CORNER ================= -->
+    <section class="benefits-section" id="benefits">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 40px;">
+          <span class="section-tag">Our Promise</span>
+          <h2 class="section-title" style="margin-bottom: 8px;">Why Choose Fruits Corner</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">Purity, quality, and nourishment delivered with heart.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <!-- 100% Natural -->
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.5 2 2 6.5 2 12c0 3 1.5 5.5 3.8 7.2L5 22l2.8-.8C9.5 21.7 10.7 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+            </div>
+            <div>
+              <h3 class="benefit-title">100% Natural</h3>
+              <p class="benefit-desc">No chemicals, just health. Naturally tree-ripened without hazardous ripening agents.</p>
+            </div>
+          </div>
+
+          <!-- Quality Checked -->
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div>
+              <h3 class="benefit-title">Quality Checked</h3>
+              <p class="benefit-desc">Only the best for you. Multi-stage hand sorting for ideal color, sweetness, and firmness.</p>
+            </div>
+          </div>
+
+          <!-- Fast Delivery -->
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <div>
+              <h3 class="benefit-title">Fast Delivery</h3>
+              <p class="benefit-desc">At your doorstep. Express morning and same-day delivery right to your kitchen counter.</p>
+            </div>
+          </div>
+
+          <!-- Healthier You -->
+          <div class="benefit-card">
+            <div class="benefit-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div>
+              <h3 class="benefit-title">Healthier You</h3>
+              <p class="benefit-desc">One fruit at a time. Wholesome vitamins, hydration, and organic vitality for your family.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BEST SELLERS / PRODUCTS ================= -->
+    <section class="products-section" id="shop">
+      <div class="container">
+        <div class="section-header-wrap">
+          <div>
+            <span class="section-tag">Farm Fresh Harvest</span>
+            <h2 class="section-title">Our Best Sellers</h2>
+            <p class="section-subtitle">Customer favorites, always fresh and delicious.</p>
+          </div>
+          
+          <!-- Category Filter Tabs -->
+          <div class="product-filter-tabs">
+            <button class="filter-tab-btn active" data-filter="all">All Fruits</button>
+            <button class="filter-tab-btn" data-filter="bestsellers">Best Sellers</button>
+            <button class="filter-tab-btn" data-filter="essentials">Daily Essentials</button>
+            <button class="filter-tab-btn" data-filter="exotic">Exotic & Berries</button>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="products-grid" id="products-grid-container">
+          <!-- Dynamic Products injected by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HEALTH / PROMOTIONAL CINEMATIC BANNER ================= -->
+    <section class="cinematic-banner-section" id="cinematic-banner">
+      <div class="container">
+        <div class="cinematic-banner-card">
+          <!-- Left Fruit Bowl Image -->
+          <div class="banner-img-col">
+            <img src="/images/health-banner.jpg" alt="Luscious Fresh Fruit Bowl" loading="lazy">
+          </div>
+
+          <!-- Right Content -->
+          <div class="banner-content-col">
+            <span class="banner-pill-tag">✨ Daily Vitality Boost</span>
+            <h2 class="banner-title">
+              A Healthier Tomorrow
+              <span>Starts Today</span>
+            </h2>
+            <p class="banner-text">
+              “Choose fresh. Choose healthy. Choose Fruits Corner. Because your family deserves the best nature has to offer.”
+            </p>
+
+            <div class="banner-action-wrap">
+              <a href="#shop" class="btn-banner-cta">
+                <span>Know More</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+
+            <!-- Decorative Typography Tags -->
+            <div class="banner-decorative-tags">
+              <span class="decor-tag">Fresh</span>
+              <span class="decor-tag">Nutritious</span>
+              <span class="decor-tag">Tasty</span>
+              <span class="decor-tag">Always for You ♡</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CUSTOMER REVIEWS ================= -->
+    <section class="reviews-section" id="about">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 50px;">
+          <span class="section-tag">Community Love</span>
+          <h2 class="section-title" style="margin-bottom: 8px;">What Our Customers Say</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">Real people. Real freshness.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1: Priya S. -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “The fruits are always fresh and of great quality. My go-to place for healthy living! The Alphonso mangoes were heavenly.”
+            </p>
+            <div class="reviewer-profile">
+              <img src="/images/avatar-priya.jpg" alt="Priya S." class="reviewer-avatar" loading="lazy">
+              <div>
+                <h4 class="reviewer-name">Priya S.</h4>
+                <span class="reviewer-meta">✓ Verified Customer • Indiranagar</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2: Arjun K. -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “Fast delivery and amazing service. The fruits taste incredibly fresh, just like they were plucked this morning from the orchard!”
+            </p>
+            <div class="reviewer-profile">
+              <img src="/images/avatar-arjun.jpg" alt="Arjun K." class="reviewer-avatar" loading="lazy">
+              <div>
+                <h4 class="reviewer-name">Arjun K.</h4>
+                <span class="reviewer-meta">✓ Verified Customer • Koramangala</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3: Meera R. -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              “Best fruit shop in town! Wide variety and great prices. Their packaging preserves all the juiciness. Highly recommended!”
+            </p>
+            <div class="reviewer-profile">
+              <img src="/images/avatar-meera.jpg" alt="Meera R." class="reviewer-avatar" loading="lazy">
+              <div>
+                <h4 class="reviewer-name">Meera R.</h4>
+                <span class="reviewer-meta">✓ Verified Customer • Whitefield</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LOCATION SECTION ================= -->
+    <section class="location-section" id="location">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 45px;">
+          <span class="section-tag">Come Say Hello</span>
+          <h2 class="section-title" style="margin-bottom: 8px;">Visit Fruits Corner</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">Freshness is waiting for you.</p>
+        </div>
+
+        <div class="location-card-container">
+          <!-- Left: Google Maps-Style Display -->
+          <div class="location-map-wrap">
+            <img src="/images/store-map.jpg" alt="Fruits Corner Storefront & Location Map" class="location-map-img" loading="lazy">
+            <div class="map-interactive-card">
+              <div class="map-pin-pulse">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="map-card-text">
+                <h5>Fruits Corner Flagship</h5>
+                <p>Open Today • Closes 9:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Store Details -->
+          <div class="location-info-wrap">
+            <div class="info-item">
+              <div class="info-icon">📍</div>
+              <div class="info-details">
+                <h4>Store Location</h4>
+                <p>#42 Green Orchard Lane, 100ft Road, Near Botanical Gardens, Bangalore - 560038</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">📞</div>
+              <div class="info-details">
+                <h4>Phone & WhatsApp</h4>
+                <p>+91 63020 94687 | +91 (080) 4567 8900</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">🕒</div>
+              <div class="info-details">
+                <h4>Opening Hours</h4>
+                <p>Monday - Sunday: 7:00 AM - 9:30 PM (Fresh morning arrivals at 7:30 AM)</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">🚗</div>
+              <div class="info-details">
+                <h4>Parking & Accessibility</h4>
+                <p>Dedicated customer parking available. Wheelchair accessible with curbside pickup.</p>
+              </div>
+            </div>
+
+            <div class="location-action-btns">
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-directions">
+                <span>Get Directions</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="https://api.whatsapp.com/send?phone=916302094687&text=Hello%20Fruits%20Corner!%20I%20would%20like%20to%20order%20fresh%20fruits." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-direct">
+                <span>WhatsApp Us</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer-section">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Col -->
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-main">
+              <span class="logo-icon-leaf">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                </svg>
+              </span>
+              Fruits Corner
+            </div>
+            <span class="logo-tagline">Freshness Lives Here</span>
+          </div>
+          <p class="footer-desc">
+            “Fresh fruits. Happier lives. At Fruits Corner, we're committed to bringing goodness, vitality, and organic health to your everyday life.”
+          </p>
+          <div class="footer-socials">
+            <a href="https://instagram.com" class="social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://facebook.com" class="social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=916302094687&text=Hello%20Fruits%20Corner!%20I%20would%20like%20to%20order%20fresh%20fruits." target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </a>
+            <a href="https://youtube.com" class="social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop All Fruits</a></li>
+            <li><a href="#benefits">About Us</a></li>
+            <li><a href="#cinematic-banner">Special Offers</a></li>
+            <li><a href="#location">Store Locations</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Us -->
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <ul class="footer-links">
+            <li><span style="color: #6ee7b7;">📞</span> +91 63020 94687</li>
+            <li><span style="color: #6ee7b7;">✉️</span> hello@fruitscorner.com</li>
+            <li><span style="color: #6ee7b7;">📍</span> Bangalore, Karnataka</li>
+            <li><span style="color: #6ee7b7;">🕒</span> Mon-Sun: 7am - 9:30pm</li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscribe -->
+        <div>
+          <h4 class="footer-col-title">Fresh Offers in Your Inbox</h4>
+          <p style="font-size: 0.88rem; color: #9ca3af; margin-bottom: 12px;">
+            Subscribe to receive weekly seasonal harvest alerts & 20% off coupons.
+          </p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Your email address" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">Join</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Fruits Corner. All rights reserved.</p>
+        <p>Crafted with love for healthy living 🌿</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SLIDE-OUT CART DRAWER ================= -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <span>Shopping Cart</span>
+        <span class="cart-badge" style="position: static; transform: none;">0</span>
+      </div>
+      <button class="cart-drawer-close" id="cart-drawer-close" aria-label="Close Cart">✕</button>
+    </div>
+
+    <div class="cart-drawer-body">
+      <!-- Empty State -->
+      <div class="cart-drawer-empty" id="cart-drawer-empty">
+        <div class="cart-drawer-empty-icon">🧺</div>
+        <h4 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-primary-dark); margin-bottom: 6px;">Your basket is empty</h4>
+        <p style="font-size: 0.9rem; color: var(--color-text-muted); max-width: 240px; margin-bottom: 20px;">
+          Add some fresh delicious fruits straight from our orchards!
+        </p>
+        <a href="#shop" class="btn-hero-primary" style="padding: 10px 24px; font-size: 0.9rem;" onclick="document.getElementById('cart-drawer-close').click()">
+          Browse Fruits →
+        </a>
+      </div>
+
+      <!-- Item List -->
+      <div class="cart-drawer-items" id="cart-drawer-items">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+
+    <!-- Drawer Footer / Summary -->
+    <div class="cart-drawer-footer" id="cart-drawer-footer" style="display: none;">
+      <!-- Coupon Box -->
+      <div class="coupon-box">
+        <input type="text" placeholder="Promo code (e.g. FRESH20)" class="coupon-input" id="cart-coupon-input">
+        <button class="coupon-btn" id="cart-apply-coupon">Apply</button>
+      </div>
+
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-val" style="font-weight: 700;">₹0</span>
+      </div>
+      <div class="cart-summary-row" id="cart-discount-row" style="display: none; color: #16a34a;">
+        <span>Discount (Promo)</span>
+        <span id="cart-discount-val">-₹0</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Delivery (Local Express)</span>
+        <span id="cart-delivery-val">FREE</span>
+      </div>
+      <div class="cart-summary-total">
+        <span>Total Amount</span>
+        <span id="cart-total-val" style="color: var(--color-primary);">₹0</span>
+      </div>
+
+      <!-- Checkout Options -->
+      <button class="btn-checkout-whatsapp" id="cart-whatsapp-checkout">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0 0 12.07 0C5.46 0 .09 5.37.09 11.98c0 2.11.55 4.17 1.6 5.99L0 24l6.21-1.63a11.96 11.96 0 0 0 5.86 1.51h.01c6.61 0 11.98-5.37 11.98-11.98 0-3.2-1.25-6.21-3.54-8.42zM12.07 21.88a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.75.98 1-3.66-.23-.38a9.91 9.91 0 0 1-1.52-5.25c0-5.5 4.47-9.98 9.97-9.98 2.66 0 5.17 1.04 7.05 2.92a9.92 9.92 0 0 1 2.92 7.06c0 5.5-4.48 9.98-9.98 9.98zm5.46-7.46c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.79-1.67-2.09-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/></svg>
+        <span>Order via WhatsApp</span>
+      </button>
+
+      <button class="btn-checkout-normal" onclick="window.fcCart.showToast('Online payment checkout gateway initialized!', 'success')">
+        Proceed to Online Payment
+      </button>
+    </div>
+  </aside>
+
+  <!-- ================= SEARCH MODAL ================= -->
+  <div class="search-modal-overlay" id="search-modal">
+    <div class="search-modal-box">
+      <div class="search-input-wrap">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" class="search-input-field" placeholder="Search fresh fruits (e.g. Alphonso, Apples, Bananas)..." id="search-input">
+        <button class="cart-drawer-close" id="search-modal-close">✕</button>
+      </div>
+      <div class="search-results-list" id="search-results">
+        <p style="color: #6b7280; text-align: center; padding: 20px;">Type a fruit name to find freshly stocked items...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PRODUCT QUICK VIEW MODAL ================= -->
+  <div class="product-modal-overlay" id="product-modal">
+    <div class="product-modal-card">
+      <button class="modal-close-btn" id="product-modal-close">✕</button>
+      <div class="modal-img-col">
+        <img src="/images/prod-apples.jpg" alt="Fruit Detail" id="modal-img">
+      </div>
+      <div class="modal-details-col">
+        <span class="product-tag" id="modal-tag" style="align-self: flex-start; margin-bottom: 8px;">Best Seller</span>
+        <h2 class="modal-title" id="modal-title">Fresh Apples</h2>
+        <div class="product-rating-row" style="margin-bottom: 12px;">
+          <span class="stars">★★★★★</span>
+          <span style="font-weight: 700; color: #374151;">4.9</span>
+          <span class="reviews-count">(Certified Orchard Grade)</span>
+        </div>
+        <div class="modal-price" id="modal-price">₹120 / kg</div>
+        <p style="font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6;" id="modal-desc">
+          Delicious crisp and juicy handpicked fruits straight from trusted organic groves.
+        </p>
+        <p style="font-size: 0.85rem; color: #059669; font-weight: 700; margin-top: 10px;" id="modal-farm">
+          Farm Origin: Kinnaur Orchards
+        </p>
+
+        <!-- Nutrition Facts -->
+        <div class="modal-nutrition-grid" id="modal-nutri-wrap">
+          <!-- Injected via JavaScript -->
+        </div>
+
+        <!-- Add to Cart in Modal -->
+        <div style="display: flex; align-items: center; gap: 14px; margin-top: auto;">
+          <div style="display: flex; align-items: center; border: 1px solid var(--color-border); border-radius: var(--radius-pill); padding: 4px 12px;">
+            <label for="modal-qty-input" style="font-size: 0.82rem; font-weight: 700; margin-right: 8px; color: var(--color-text-muted);">Qty:</label>
+            <input type="number" id="modal-qty-input" value="1" min="1" max="20" style="width: 44px; border: none; font-size: 1rem; font-weight: 700; text-align: center; outline: none;">
+          </div>
+          <button class="btn-hero-primary" id="modal-add-btn" style="flex-grow: 1; justify-content: center; padding: 12px 20px;">
+            Add to Basket
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="fc-toast-container" id="fc-toast-container"></div>
+
+  <!-- App Script -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

@@ -378,7 +378,7 @@ function initCartDrawer() {
 
   whatsappCheckoutBtn?.addEventListener('click', () => {
     let msg = cart.generateWhatsAppOrderMessage();
-    const phone = '916302094687';
+    const phone = '919391716665';
     if (!msg) {
       // Predefined default order inquiry message when cart is empty
       const defaultText = `*Order - Fruits Corner (Freshness Lives Here)*\n--------------------------------------\nHello Fruits Corner! I would like to order fresh fruits.\nPlease send me the available fruit list and today's specials! 🌿`;

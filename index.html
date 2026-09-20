@@ -60,13 +60,13 @@
           <span class="cart-badge">0</span>
         </button>
 
-        <!-- Order Now Button -->
-        <a href="#shop" class="btn-order-now" id="header-order-btn">
+        <!-- Order Now Button: opens cart drawer with items and total bill -->
+        <button class="btn-order-now cart-open-trigger" id="header-order-btn" aria-label="Order Now and View Cart Bill">
           <span>Order Now</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
-        </a>
+        </button>
 
         <!-- Mobile Hamburger Toggle -->
         <div class="mobile-toggle" id="mobile-toggle" aria-label="Open Mobile Menu">
@@ -562,7 +562,7 @@
   <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
     <div class="cart-drawer-header">
       <div class="cart-drawer-title">
-        <span>Shopping Cart</span>
+        <span>Cart Items & Bill</span>
         <span class="cart-badge" style="position: static; transform: none;">0</span>
       </div>
       <button class="cart-drawer-close" id="cart-drawer-close" aria-label="Close Cart">✕</button>
@@ -573,11 +573,36 @@
       <div class="cart-drawer-empty" id="cart-drawer-empty">
         <div class="cart-drawer-empty-icon">🧺</div>
         <h4 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-primary-dark); margin-bottom: 6px;">Your basket is empty</h4>
-        <p style="font-size: 0.9rem; color: var(--color-text-muted); max-width: 240px; margin-bottom: 20px;">
-          Add some fresh delicious fruits straight from our orchards!
+        <p style="font-size: 0.9rem; color: var(--color-text-muted); max-width: 260px; margin-bottom: 16px;">
+          Add fresh fruits to generate your order list and total bill!
         </p>
-        <a href="#shop" class="btn-hero-primary" style="padding: 10px 24px; font-size: 0.9rem;" onclick="document.getElementById('cart-drawer-close').click()">
-          Browse Fruits →
+
+        <!-- Quick Add Favorites -->
+        <div style="width: 100%; border-top: 1px dashed #e5e7eb; padding-top: 14px; margin-top: 4px;">
+          <p style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--color-primary); margin-bottom: 10px;">
+            Quick Add Favorites:
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 8px; text-align: left;">
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #f9fafb; padding: 8px 12px; border-radius: 12px; border: 1px solid #f3f4f6;">
+              <span style="font-weight: 700; font-size: 0.88rem; color: var(--color-primary-dark);">🍎 Fresh Apples</span>
+              <span style="font-weight: 700; color: #145a27; font-size: 0.88rem;">₹120/kg</span>
+              <button class="btn-add-cart" style="padding: 4px 12px; font-size: 0.78rem;" onclick="window.handleAddToCart('prod-1')">+ Add</button>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #f9fafb; padding: 8px 12px; border-radius: 12px; border: 1px solid #f3f4f6;">
+              <span style="font-weight: 700; font-size: 0.88rem; color: var(--color-primary-dark);">🍌 Premium Bananas</span>
+              <span style="font-weight: 700; color: #145a27; font-size: 0.88rem;">₹60/kg</span>
+              <button class="btn-add-cart" style="padding: 4px 12px; font-size: 0.78rem;" onclick="window.handleAddToCart('prod-2')">+ Add</button>
+            </div>
+            <div style="display: flex; align-items: center; justify-content: space-between; background: #f9fafb; padding: 8px 12px; border-radius: 12px; border: 1px solid #f3f4f6;">
+              <span style="font-weight: 700; font-size: 0.88rem; color: var(--color-primary-dark);">🥭 Alphonso Mangoes</span>
+              <span style="font-weight: 700; color: #145a27; font-size: 0.88rem;">₹250/kg</span>
+              <button class="btn-add-cart" style="padding: 4px 12px; font-size: 0.78rem;" onclick="window.handleAddToCart('prod-4')">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <a href="#shop" class="btn-view-all" style="margin-top: 18px; font-size: 0.85rem;" onclick="document.getElementById('cart-drawer-close').click()">
+          Browse Full Catalog →
         </a>
       </div>
 
@@ -608,7 +633,7 @@
         <span id="cart-delivery-val">FREE</span>
       </div>
       <div class="cart-summary-total">
-        <span>Total Amount</span>
+        <span>Total Money Bill:</span>
         <span id="cart-total-val" style="color: var(--color-primary);">₹0</span>
       </div>
 

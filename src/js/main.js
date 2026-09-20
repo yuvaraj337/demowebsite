@@ -360,6 +360,13 @@ function initCartDrawer() {
   };
 
   openBtns.forEach(btn => btn.addEventListener('click', () => toggleCart(true)));
+  
+  const headerOrderBtn = document.getElementById('header-order-btn');
+  headerOrderBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleCart(true);
+  });
+
   closeBtn?.addEventListener('click', () => toggleCart(false));
   overlay?.addEventListener('click', () => toggleCart(false));
 
